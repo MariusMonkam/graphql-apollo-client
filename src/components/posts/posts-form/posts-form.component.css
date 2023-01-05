@@ -1,0 +1,20 @@
+.errors-validation {
+  color: red;
+  font-size: smaller;
+  text-align: center;
+}
+.posts-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  width: 25%;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.form-item {
+  display: flex;
+  justify-content: space-between;
+}
