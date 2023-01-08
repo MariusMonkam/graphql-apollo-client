@@ -1,3 +1,4 @@
+import Paper from "@mui/material/Paper";
 import React from "react";
 import { IPost } from "../../../common/interfaces/post.interface";
 import PostGridItem from "./posts-grid-item/posts-grid-item.component";
@@ -8,13 +9,13 @@ interface PostsGridProps {
 }
 const PostGrid: React.FC<PostsGridProps> = ({ posts }: PostsGridProps) => {
   return (
-    <div className="posts-grid">
+    <Paper elevation={3}>
       {posts.map((post) => (
         <div key={post.id}>
           <PostGridItem post={post} />
         </div>
       ))}
-    </div>
+    </Paper>
   );
 };
 
