@@ -42,47 +42,43 @@ const PostsForm: React.FC = () => {
       <Paper elevation={3}>
         <Box
           sx={{
-            width: 450,
-            height: 300,
-            maxWidth: "100%",
+            width: "100%",
+            height: "auto",
           }}
         >
-          <div>
-            <Controller
-              name="title"
-              control={control}
-              defaultValue="Title of my post"
-              render={({ field }) => (
-                <TextField
-                  {...field}
-                  label="Post title"
-                  variant="outlined"
-                  fullWidth
-                  error={!!errors.title}
-                  helperText={errors.title ? errors.title?.message : ""}
-                />
-              )}
-            />
-          </div>
-          <div style={{ paddingTop: 10 }}>
-            <Controller
-              name="body"
-              control={control}
-              defaultValue="Body of my post"
-              render={({ field }) => (
-                <TextField
-                  {...field}
-                  label="Post body"
-                  multiline
-                  rows={7}
-                  variant="outlined"
-                  fullWidth
-                  error={!!errors.body}
-                  helperText={errors.body ? errors.body?.message : ""}
-                />
-              )}
-            />
-          </div>
+          <Controller
+            name="title"
+            control={control}
+            defaultValue="Title of my post"
+            render={({ field }) => (
+              <TextField
+                {...field}
+                label="Post title"
+                variant="outlined"
+                fullWidth
+                error={!!errors.title}
+                helperText={errors.title ? errors.title?.message : ""}
+              />
+            )}
+          />
+
+          <Controller
+            name="body"
+            control={control}
+            defaultValue="Body of my post"
+            render={({ field }) => (
+              <TextField
+                {...field}
+                label="Post body"
+                multiline
+                rows={7}
+                variant="outlined"
+                fullWidth
+                error={!!errors.body}
+                helperText={errors.body ? errors.body?.message : ""}
+              />
+            )}
+          />
         </Box>
         <div
           style={{
