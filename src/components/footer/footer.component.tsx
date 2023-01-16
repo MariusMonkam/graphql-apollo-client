@@ -19,12 +19,14 @@ export const Footer: FC = (): ReactElement => {
             </Typography>
           </Grid>
           <Grid item xs={12}>
-            <Typography color="contrastText" variant="subtitle1">
-              {`${new Date().getFullYear()} | React |Typescript | Graphql | Apollo client | React-Hook-form | Yup| Material UI | React Router`}
+            <Typography color="primary.contrastText" variant="subtitle1">
+              {
+                "| React |Typescript | Graphql | Apollo client | React-Hook-form | Yup| Material UI | React Router"
+              }
             </Typography>
           </Grid>
           <Grid item xs={12}>
-            <Typography color="contrastText" variant="subtitle1">
+            <Typography color="primary.contrastText" variant="subtitle1">
               {`© ${new Date().getFullYear()} Marius Monkam`}
             </Typography>
           </Grid>
