@@ -16,6 +16,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { routes } from "../routes/routes";
 
 import "./header.component.css";
+import AnimLogo from "../logo";
 
 const Header: React.FC = (): ReactElement => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -38,17 +39,7 @@ const Header: React.FC = (): ReactElement => {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            color="secondary.main"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-            }}
-          >
-            Graphql App
-          </Typography>
+          <AnimLogo />
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
