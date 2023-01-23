@@ -21,6 +21,7 @@ const schema = yup.object().shape({
 
 const PostsForm: React.FC = () => {
   const theme = useTheme();
+
   const {
     handleSubmit,
     control,
