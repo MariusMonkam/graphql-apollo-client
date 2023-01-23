@@ -17,8 +17,11 @@ import { routes } from "../routes/routes";
 
 import "./header.component.css";
 import AnimLogo from "../logo";
+import { useStyles } from "../../hooks/posts/useStyles";
 
 const Header: React.FC = (): ReactElement => {
+  const classes = useStyles();
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (e: any) => {
@@ -71,6 +74,7 @@ const Header: React.FC = (): ReactElement => {
             >
               {routes.map((page) => (
                 <Link
+                  className={classes.link}
                   key={page.key}
                   component={NavLink}
                   to={page.path}
@@ -106,13 +110,17 @@ const Header: React.FC = (): ReactElement => {
             >
               {routes.map((page) => (
                 <Link
+                  className={classes.link}
                   key={page.key}
                   component={NavLink}
                   to={page.path}
                   underline="none"
                   color="white"
                   variant="button"
-                  sx={{ fontSize: "large", marginLeft: "2rem" }}
+                  sx={{
+                    fontSize: "large",
+                    marginLeft: "2rem",
+                  }}
                 >
                   {page.title}
                 </Link>
